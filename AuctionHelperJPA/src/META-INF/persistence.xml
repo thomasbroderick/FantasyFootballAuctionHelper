@@ -9,14 +9,14 @@
     
     </provider>
     <!--  Classes begin here baby  -->
-
-   
-    <!-- <class>com.skilldistillery.finaljpa.entities.Setting</class> -->
+    <class>com.auctionhelper.entities.User</class>
+    <class>com.auctionhelper.entities.Player</class>
+    <class>com.auctionhelper.entities.Team</class>
     
 
     <properties>
       <property name="javax.persistence.jdbc.url"
-        value="jdbc:mysql://localhost:3306/auction_db" />
+        value="jdbc:mysql://localhost:3306/mydb" />
       <property name="javax.persistence.jdbc.user"
         value="student"/>
       <property name="javax.persistence.jdbc.password"
