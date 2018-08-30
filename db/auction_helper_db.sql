@@ -24,6 +24,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`User` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
   `password` VARCHAR(145) NOT NULL,
+  `enabled` TINYINT(1) NULL DEFAULT 1,
+  `role` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -81,8 +83,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `mydb`;
-INSERT INTO `mydb`.`User` (`id`, `username`, `password`) VALUES (1, 'admin', 'admin');
-INSERT INTO `mydb`.`User` (`id`, `username`, `password`) VALUES (2, 'standard', 'standard');
+INSERT INTO `mydb`.`User` (`id`, `username`, `password`, `enabled`, `role`) VALUES (1, 'admin', 'admin', NULL, NULL);
+INSERT INTO `mydb`.`User` (`id`, `username`, `password`, `enabled`, `role`) VALUES (2, 'standard', 'standard', NULL, NULL);
 
 COMMIT;
 
