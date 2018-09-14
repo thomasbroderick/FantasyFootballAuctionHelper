@@ -1,3 +1,4 @@
+import { Team } from './../models/team';
 import { TeamService } from './../team.service';
 import { PlayerService } from './../player.service';
 import { Component, OnInit } from '@angular/core';
@@ -19,6 +20,16 @@ export class MainComponent implements OnInit {
     'WR'
   ];
   selectedPosition = 'all';
+
+  updatePlayer(player) {
+    console.log(player);
+    this.playerServ.update(player.id, player).subscribe(
+      data => {
+        this.reload();
+      },
+      err => console.error('Observer got an error: ' + err)
+    );
+  }
 
   reload() {
     this.playerServ.index().subscribe(

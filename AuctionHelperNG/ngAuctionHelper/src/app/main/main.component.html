@@ -29,11 +29,18 @@
   <tbody>
     <tr *ngFor='let player of players | position:selectedPosition'>
       <td>{{player.playerName}}</td>
-      <td>{{player.team}}</td>
+      <td>
+        <select name="team" [(ngModel)]="player.team">
+          <option *ngFor="let team of teams" [ngValue]="team">
+            {{ team.name }}
+          </option>
+        </select>
+      </td>
       <td>{{player.position}}</td>
       <td>{{player.salary}}</td>
       <td>{{player.expectedPoints}}</td>
       <td>{{player.dollarValue}}</td>
+      <button class="btn btn-danger" (click)='updatePlayer(player)'>Update</button>
     </tr>
   </tbody>
 </table>

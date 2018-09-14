@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Team {
 	@Id
@@ -17,6 +19,7 @@ public class Team {
 	private String name;
 	private String owner;
 	private int budget;
+	@JsonIgnore
 	@OneToMany(mappedBy = "team")
 	private List<Player> players;
 

@@ -7,11 +7,14 @@ import org.springframework.stereotype.Service;
 
 import com.auctionhelper.entities.Player;
 import com.auctionhelper.repositories.PlayerRepository;
+import com.auctionhelper.repositories.TeamRepository;
 @Service
 public class PlayerServiceImpl implements PlayerService {
 	
 	@Autowired
 	private PlayerRepository playerRepo;
+	@Autowired
+	private TeamRepository teamRepo;
 	
 
 	@Override

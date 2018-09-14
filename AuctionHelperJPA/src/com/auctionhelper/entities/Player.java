@@ -17,7 +17,6 @@ public class Player {
 	private int id;
 	@Column(name = "player_name")
 	private String playerName;
-	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "team_id")
 	private Team team;

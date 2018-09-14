@@ -7,13 +7,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PositionPipe implements PipeTransform {
 
   transform(players: Player[], searchType: string): any {
-    let results = [];
+    const results = [];
 
     if (searchType === 'all') {
-      results = players;
+      players.forEach(function(player) {
+        if (player.team.id === 9) {
+          results.push(player);
+        }
+      });
     } else {
       players.forEach(function(player) {
-        if (player.position === searchType) {
+        if (player.position === searchType && player.team.id === 9) {
           results.push(player);
         }
       });
