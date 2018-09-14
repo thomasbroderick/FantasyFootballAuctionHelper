@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { PillsComponent } from './pills/pills.component';
+import { PositionPipe } from './position.pipe';
 
 @NgModule({
   declarations: [
@@ -20,12 +23,15 @@ import { NavigationComponent } from './navigation/navigation.component';
     LogoutComponent,
     RegisterComponent,
     NotfoundComponent,
-    NavigationComponent
+    NavigationComponent,
+    PillsComponent,
+    PositionPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgbModule.forRoot(),
     HttpClientModule
   ],
   providers: [],

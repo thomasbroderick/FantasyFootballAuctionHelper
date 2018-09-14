@@ -12,6 +12,13 @@ import { Team } from '../models/team';
 export class MainComponent implements OnInit {
   players: Player[] = [];
   teams: Team[] = [];
+  positions = [
+    'all',
+    'QB',
+    'RB',
+    'WR'
+  ];
+  selectedPosition = 'all';
 
   reload() {
     this.playerServ.index().subscribe(
