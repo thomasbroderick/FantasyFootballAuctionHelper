@@ -46,7 +46,7 @@ class PlayerTests {
 	
 	@Test
 	void test_player_mapping() {
-		assertEquals("Tom Brady", p.getName());
+		assertEquals("Tom Brady", p.getPlayerName());
 	}
 
 	@Test

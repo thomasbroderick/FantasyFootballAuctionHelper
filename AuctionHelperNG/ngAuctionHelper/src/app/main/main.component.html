@@ -1,3 +1,40 @@
-<p>
-  main works!
-</p>
+<h1>Fantasy Football Auction Helper</h1>
+<h2>Teams</h2>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Owner</th>
+    <th>Budget</th>
+  </thead>
+  <tbody>
+    <tr *ngFor='let team of teams'>
+      <td>{{team.name}}</td>
+      <td>{{team.owner}}</td>
+      <td>{{team.budget}}</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<h2>Players</h2>
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Team</th>
+    <th>Position</th>
+    <th>Salary</th>
+    <th>Points</th>
+    <th>Value</th>
+  </thead>
+  <tbody>
+    <tr *ngFor='let player of players'>
+      <td>{{player.playerName}}</td>
+      <td>{{player.team}}</td>
+      <td>{{player.position}}</td>
+      <td>{{player.salary}}</td>
+      <td>{{player.expectedPoints}}</td>
+      <td>{{player.dollarValue}}</td>
+    </tr>
+  </tbody>
+</table>
+
+

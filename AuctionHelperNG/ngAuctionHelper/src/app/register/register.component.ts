@@ -11,7 +11,7 @@ export class RegisterComponent implements OnInit {
   register(form) {
     this.auth.register(form.value).subscribe(
       data => {
-        this.router.navigateByUrl('todo');
+        this.router.navigateByUrl('main');
       },
       err => {
         console.error('Observer got an error: ' + err);

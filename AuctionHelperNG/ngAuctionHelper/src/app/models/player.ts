@@ -1,23 +1,26 @@
 import { Team } from './team';
 export class Player {
   id: number;
-  name: string;
+  playerName: string;
   team: Team;
   position: string;
   salary: number;
-  points: number;
+  expectedPoints: number;
+  dollarValue: number;
 
   constructor(
-    $name?: string,
+    $playerName?: string,
     $team?: Team,
     $position?: string,
     $salary?: number,
-    $points?: number
+    $expectedPoints?: number,
+    $dollarValue?: number
   ) {
-    this.name = $name;
+    this.playerName = $playerName;
     this.team = $team;
     this.position = $position;
     this.salary = $salary;
-    this.points = $points;
+    this.expectedPoints = $expectedPoints;
+    this.dollarValue = $dollarValue;
   }
 }

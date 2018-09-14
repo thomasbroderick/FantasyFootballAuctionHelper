@@ -9,7 +9,7 @@ import { environment } from '../environments/environment';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  url = environment.baseUrl;
+  url = environment.authUrl;
 
 
   login(username, password) {
