@@ -3,7 +3,7 @@ import { TeamService } from './../team.service';
 import { PlayerService } from './../player.service';
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../models/player';
-import { Team } from '../models/team';
+
 
 @Component({
   selector: 'app-main',
@@ -20,6 +20,11 @@ export class MainComponent implements OnInit {
     'WR'
   ];
   selectedPosition = 'all';
+  selectedTeam: Team = null;
+
+  displayTeam(team) {
+    this.selectedTeam = team;
+  }
 
   updatePlayer(player) {
     console.log(player);

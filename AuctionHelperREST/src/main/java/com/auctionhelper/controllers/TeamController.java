@@ -35,7 +35,7 @@ public class TeamController {
 		return teamServ.index();
 	}
 
-	@RequestMapping(path = "team/{pid}")
+	@RequestMapping(path = "teams/{pid}", method = RequestMethod.GET)
 	public Team show(HttpServletRequest req, HttpServletResponse res, @PathVariable int pid, Principal principal) {
 		return teamServ.show(pid);
 	}

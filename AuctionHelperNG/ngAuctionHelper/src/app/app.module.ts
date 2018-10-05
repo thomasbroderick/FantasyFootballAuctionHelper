@@ -14,6 +14,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PillsComponent } from './pills/pills.component';
 import { PositionPipe } from './position.pipe';
+import { TeamPipe } from './team.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PositionPipe } from './position.pipe';
     NotfoundComponent,
     NavigationComponent,
     PillsComponent,
-    PositionPipe
+    PositionPipe,
+    TeamPipe
   ],
   imports: [
     BrowserModule,
